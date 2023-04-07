@@ -1,0 +1,39 @@
+@mixin fl {
+    float: left;
+}
+
+@mixin rl {
+    float: right;
+}
+
+@mixin wh($wNum:100%,$hNum:100vh) {
+    width: $wNum;
+    height: $hNum;
+}
+
+@mixin flex($wrap:nowrap,$horizontal:center,$vertical:center) {
+    display: flex;
+    flex-wrap:$wrap;
+    align-items: $horizontal;
+    justify-content: $vertical;
+    overflow: hidden;
+}
+
+@mixin animationUp {
+    h1,span{
+        animation-name: slideUp;
+        animation-duration: 2s;
+    }
+    @keyframes slideUp {
+        from{
+            margin-top: 200px;
+            // display: none;
+            opacity: 0;
+        }
+        to{
+            margin-top: 0;
+            // display: inline-block;
+            opacity: 1;
+        }
+    }
+}
